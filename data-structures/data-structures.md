@@ -41,4 +41,19 @@
 **O(1)** The element is taken from the bottom cell of the Priority Queue (and the element is deleted).
 #### Element (Peek)
 **O(1)** The same as Remove() but the element is not deleted.
+## Linked Lists
+* The list itself consists of 2 parts, the list object and the inner container objects for the data;
+* Each container object has a link to a next container object;
+* The list object has a link to the first container object;
+* The double-ended Linked List in the list object has links to the last and first elements. This kind of list allows to insert items in the begging and the end of the list;
+* The doubly Linked List in each container object has the link to previous and next containers (right and left);
+
+#### Add (addLast(), addFirst())
+**O(1)** New item is inserted in the beginning (end) of the list. To do that only 2 links should be updated.
+#### Add at index
+**O(N)** To find the place for a new item you need to follow all the links to get to he needed index.
+#### Element
+**O(N)** To get the need item you need to follow the links from container to container to find it.
+#### Delete
+**O(1)** To delete an item form the beginning or the you just need to update 2 links.
 

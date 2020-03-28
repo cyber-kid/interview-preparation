@@ -49,4 +49,14 @@ The selection sort minimizes the number of swaps, but the number of comparisons 
 The insertion sort is the most versatile of the three and is the best bet in most situations, assuming the amount of data is small or the data is almost sorted. For larger amounts of data, quicksort is generally considered the fastest approach.
   
 We’ve compared the sorting algorithms in terms of speed. Another consideration for any algorithm is how much memory space it needs. All three of the algorithms in this chapter carry out their sort in place, meaning that, besides the initial array, very little extra memory is required. All the sorts require an extra variable to store an item temporarily while it’s being swapped.
+## Merge sort
+The idea in the mergesort is to divide an array in half, sort each half, and then merge the two halves into a single sorted array. You divide the half into two quarters, sort each of the quarters, and merge them to make a sorted half. Similarly, each pair of 8ths is merged to make a sorted quarter, each pair of 16ths is merged to make a sorted 8th, and so on. You divide the array again and again until you reach a subarray with only one element. This is the base case; it’s assumed an array with one element is already sorted. As mergeSort() returns from finding two arrays of one element each, it merges them into a sorted array of two elements. Each pair of resulting 2-element arrays is then merged into a 4-element array. This process continues with larger and larger arrays until the entire array is sorted.
+
+The subarrays are stored in sections of the workspace array. This means that subarrays in the original array are copied to appropriate places in the workspace array. After each merge, the workspace array is copied back into the original array.
+#### Efficiency of the mergesort
+The mergesort runs in __O(N*logN)__ time. Let’s see how we can figure out the number of times a data item must be copied and the number times it must be compared with another data item during the course of the algorithm. We assume that copying and comparing are the most time-consuming operations.
+
+To sort 8 items requires 3 levels, each of which involves 8 copies. A level means all copies into the same size subarray. In the first level, there are four 2-element subarrays; in the second level, there are two 4-element subarrays; and in the third level, there is one 8-element subarray. Each level has 8 elements, so again there are 3*8 or 24 copies (8*log(8) => 8*3 => 24).
+
+Assuming the number of items is a power of 2, for each individual merging operation, the maximum number of comparisons is always one less than the number of items being merged, and the minimum is half the number of items being merged.
   
