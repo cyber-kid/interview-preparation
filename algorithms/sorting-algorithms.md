@@ -16,8 +16,7 @@ Both swaps and comparisons are proportional to N^2. Because constants don’t co
 ## Selection Sort
 The selection sort improves on the bubble sort by reducing the number of swaps necessary from **O(N^2)** to **O(N)**. Unfortunately, the number of comparisons remains **O(N^2)**. However, the selection sort can still offer a significant improvement for large records that must be physically moved around in memory, causing the swap time to be much more important than the comparison time. (Typically, this isn’t the case in Java, where references are moved around, not entire objects.)
 
-The outer loop, with loop variable _ **out**-, starts at the beginning of the array (index 0) and proceeds toward higher indices.
-The inner loop, with loop variable _**in**_, begins at _**out**_ and likewise proceeds to the right. At each new position of _**in**_, the elements a[in] and a[min] are compared. If a[in] is smaller, then _**min**_ is given the value of _**in**_. At the end of the inner loop, _**min**_ points to the minimum value, and the array elements pointed to by _**out**_ and _**min**_ are swapped.
+The outer loop, with loop variable _**out**_, starts at the beginning of the array (index 0) and proceeds toward higher indices. The inner loop, with loop variable _**in**_, begins at _**out**_ and likewise proceeds to the right. The __**min**__ variable starts at __**out**__. At each new position of _**in**_, the elements a[in] and a[min] are compared. If a[in] is smaller, then _**min**_ is given the value of _**in**_. At the end of the inner loop, _**min**_ points to the minimum value, and the array elements pointed to by _**out**_ and _**min**_ are swapped.
 #### Invariant
 In the selection sort, the data items with indices less than or equal to _**out**_ are always sorted.
 #### Efficiency of the Selection Sort
@@ -25,7 +24,7 @@ The selection sort performs the same number of comparisons as the bubble sort: _
 ## Insertion Sort
 In most cases the insertion sort is the best of the elementary sorts. It still executes in **O(N^2)** time, but it’s about twice as fast as the bubble sort and somewhat faster than the selection sort in normal situations. It’s also not too complex, although it’s slightly more involved than the bubble and selection sorts. It’s often used as the final stage of more sophisticated sorts, such as quicksort.
 
-In the outer for loop, _**out**_ starts at 1 and moves right. It marks the leftmost unsorted data. In the inner while loop, _**in**_ starts at _**out**_ and moves left, until either _**temp**_ is smaller than the array element there, or it can’t go left any further. Each pass through the while loop shifts another sorted element one space right.
+In the outer for loop, _**out**_ starts at 1 and moves right. It marks the leftmost unsorted data. The __**temp**__ variable holds the value index with __**out**__. In the inner while loop, _**in**_ starts at _**out**_ and moves left, until either _**temp**_ is smaller than the array element there, or it can’t go left any further. Each pass through the while loop shifts another sorted element one space right.
 #### Invariant
 At the end of each pass, following the insertion of the item from _**temp**_, the data items with smaller indices than _**outer**_ are partially sorted.
 #### Efficiency of the Insertion Sort
