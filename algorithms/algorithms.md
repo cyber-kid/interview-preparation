@@ -1,5 +1,7 @@
 # General information
-
+* [Big O](#big-o)
+* [Invariants](#invariants)
+* [Recursion](#recursion)
 ### Big O
 In computer science the way to say how efficient a computer algorithm is is called “Big O” notation. Big O notation uses the uppercase letter O, which you can think of as meaning “order of.”
 

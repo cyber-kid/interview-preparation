@@ -1,4 +1,9 @@
 # Data structures
+* [Arrays](#arrays)
+* [Stacks](#stacks)
+* [Queues](#queues)
+* [Priority Queues](#priority-queues)
+* [Linked Lists](#linked-lists)
 ## Arrays
 * Predefined size;
 * Ordered;

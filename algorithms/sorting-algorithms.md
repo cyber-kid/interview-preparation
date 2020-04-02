@@ -1,5 +1,8 @@
 # Sorting algorithms
-
+* [Bubble sort](#bubble-sort)
+* [Selection sort](#selection-sort)
+* [Insertion sort](#insertion-sort)
+* [Merge sort](#merge-sort)
 ## Bubble sort
 The idea is to put the smallest item at the beginning of the array (index 0) and the largest item at the end (index nElems-1). The loop counter _**out**_ in the outer for loop starts at the end of the array, at nElems-1, and decrements itself each time through the loop. The items at indices greater than _**out**_ are always completely sorted. The _**out**_ variable moves left after each pass by in so that items that are already sorted are no longer involved in the algorithm.
 The inner loop counter _**in**_ starts at the beginning of the array and increments itself each cycle of the inner loop, exiting when it reaches _**out**_. Within the inner loop, the two array cells pointed to by _**in**_ and _**in+1**_ are compared, and swapped if the one in _**in**_ is larger than the one in _**in+1**_.
