@@ -1,4 +1,4 @@
-# Design Patterns
+# General information
 #### OO Principles
 - Encapsulate what varies.
 - Favor composition over inheritance.
