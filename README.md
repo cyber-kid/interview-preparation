@@ -8,6 +8,7 @@
     * [Data structures](https://github.com/cyber-kid/interview-preparation/tree/master/data-structures/data-structures.md)
 * [Design patterns](https://github.com/cyber-kid/interview-preparation/tree/master/design-patterns)
     * [General information](https://github.com/cyber-kid/interview-preparation/tree/master/design-patterns/desgin-patterns.md)
+    * [Design principles](https://github.com/cyber-kid/interview-preparation/tree/master/design-patterns/design-principles.md)
 * [Java Core](https://github.com/cyber-kid/interview-preparation/tree/master/java-core)
     * [Class Loader](https://github.com/cyber-kid/interview-preparation/tree/master/java-core)
     * [Comparator and Comparable](https://github.com/cyber-kid/interview-preparation/tree/master/java-core/java-comparator-and-comparable.md)
