@@ -1,0 +1,12 @@
+# Links
+* https://dzone.com/articles/weak-soft-and-phantom-references-in-java-and-why-they-matter
+* https://www.geeksforgeeks.org/types-references-java/
+* https://dzone.com/articles/java-memory-management
+* https://www.baeldung.com/java-permgen-metaspace
+* https://www.quora.com/How-does-garbage-collection-work-internally-in-Java
+* https://stackoverflow.com/questions/53678418/java-memory-areas
+* https://m.habr.com/ru/post/169869/
+* https://www.baeldung.com/java-finalize
+* https://m.habr.com/ru/post/169883/
+* https://www.logicbig.com/tutorials/core-java-tutorial/gc/phantom-reference.html
+* https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/

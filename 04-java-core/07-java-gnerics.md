@@ -3,6 +3,7 @@
 * [Generic Interfaces](#generic-interfaces)
 * [Generic Methods](#generic-methods)
 * [Bound Wildcards](#bound-wildcards)
+* [Producer Extends, Consumer Super](#pecs)
 #### Generics Classes
 You can introduce generics into your own classes. The syntax for introducing a generic is to declare a formal type parameter in angle brackets. For example, the following class named Crate has a generic type variable declared after the name of the class:
 ```java
@@ -69,5 +70,10 @@ A wildcard generic type is an unknown generic type represented with a question m
 2. **Upper-bounded wildcard (<? extends Number>)**. It represents any class that extends Number or Number itself.
 3. **Lower-bounded wildcard (<? super String>)**. It represents list of String objects or a list of some objects that are a superclass of String.
 
-Something interesting happens when we work with upper bounds or unbounded wildcards. The list becomes logically immutable.
-The wildcard is not allowed to be on the right side of an assignment.
+#### PECS
+Remember PECS: "Producer Extends, Consumer Super".
+
+* **"Producer Extends"** - If you need a List to produce T values (you want to read Ts from the list), you need to declare it with ? extends T, e.g. List<? extends Integer>. But you cannot add to this list.
+* **"Consumer Super"** - If you need a List to consume T values (you want to write Ts into the list), you need to declare it with ? super T, e.g. List<? super Integer>. But there are no guarantees what type of object you may read from this list.
+
+If you need to both read from and write to a list, you need to declare it exactly with no wildcards, e.g. List< Integer >.
