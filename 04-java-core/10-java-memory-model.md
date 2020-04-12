@@ -14,7 +14,7 @@
 * [Java Garbage Collection Monitoring](#java-garbage-collection-monitoring)
 * [Java VisualVM with Visual GC](#java-visualvm-with-visual-gc)
 
-![](../images/java-memory-model.png)
+![](../0-images/java-memory-model.png)
 As you can see in the above image, JVM memory is divided into separate parts. At broad level, JVM Heap memory is physically divided into two parts – Young Generation and Old Generation.
 
 #### Young Generation
