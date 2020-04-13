@@ -4,6 +4,7 @@
 * [Queues](#queues)
 * [Priority Queues](#priority-queues)
 * [Linked Lists](#linked-lists)
+* [Binary tree](#binary-tree)
 ## Arrays
 * Predefined size;
 * Ordered;
@@ -61,4 +62,41 @@
 **O(N)** To get the need item you need to follow the links from container to container to find it.
 #### Delete
 **O(1)** To delete an item form the beginning or the you just need to update 2 links.
+## Binary tree
+* There is only one root in a tree;
+* There must be one (and only one!) path from the root to any other node;
+* Every node in a tree can have at most two children;
+* Left child should be less than parent;
+* Right child should be greater or equal to the parent;
+#### Find
+**O(logN)** The time required to find a node depends on how many levels down it is situated.
+#### Insert
+**O(logN)** To insert a node means to find one that does not exist and update the references.
+#### Traverse
+**O(N)**
+#### Delete
+**O(logN)** To delete a node means to find the node and remove the references to it.
+#### Notes on deleting a node
+When you’ve found the node, there are three cases to consider:
+
+**The node to be deleted is a leaf (has no children)** To delete a leaf node, you simply change the appropriate child field in the node’s parent to point to null, instead of to the node.
+
+**The node to be deleted has one child** You want to “snip” the node out of this sequence by connecting its parent directly to its child. This process involves changing the appropriate reference in the parent (leftChild or rightChild) to point to the deleted node’s child.
+
+**The node to be deleted has two children** To delete a node with two children, replace the node with its **inorder successor**. For each node, the node with the next-highest key is called its **inorder successor**, or simply its successor. If the right child of the original node has no left children, this right child is itself the successor.
+
+To find a successor first, the program goes to the original node’s right child, which must have a key larger than the node. Then it goes to this right child’s left child (if it has one), and to this left child’s left child, and so on, following down the path of left children. The last left child in this path is the successor of the original node.
+
+If **successor** is the right child of current, things are simplified somewhat because we can simply move the subtree of which successor is the root and plug it in where the deleted node was. This operation requires only two steps:
+1. Unplug current from the rightChild field of its parent (or leftChild field if appropriate), and set this field to point to successor.
+2. Unplug current’s left child from current, and plug it into the leftChild field of successor.
+
+If **successor** is a left descendant of the right child of the node to be deleted, four steps are required to perform the deletion:
+1. Plug the right child of successor into the leftChild field of the successor’s parent.
+2. Plug the right child of the node to be deleted into the rightChild field of successor.
+3. Unplug current from the rightChild field of its parent, and set this field to point to successor.
+4. Unplug current’s left child from current, and plug it into the leftChild field of successor.
+
+![](../0-images/successor-left-child.png)
+
 
