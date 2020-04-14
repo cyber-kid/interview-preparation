@@ -6,6 +6,7 @@
     3. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/01-algorithms/3-links.mds)
 2. [Data structures](https://github.com/cyber-kid/interview-preparation/tree/master/02-data-structures/)
     1. [Data structures](https://github.com/cyber-kid/interview-preparation/tree/master/02-data-structures/1-data-structures.md)
+    2. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/02-data-structures/2-links.md)
 3. [Design patterns](https://github.com/cyber-kid/interview-preparation/tree/master/03-design-patterns)
     1. [General information](https://github.com/cyber-kid/interview-preparation/tree/master/03-design-patterns/01-desgin-patterns.md)
     2. [Design principles](https://github.com/cyber-kid/interview-preparation/tree/master/03-design-patterns/02-design-principles.md)

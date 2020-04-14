@@ -5,6 +5,7 @@
 * [Priority Queues](#priority-queues)
 * [Linked Lists](#linked-lists)
 * [Binary tree](#binary-tree)
+* [Red-Black tree](#red-black-tree)
 ## Arrays
 * Predefined size;
 * Ordered;
@@ -69,13 +70,13 @@
 * Left child should be less than parent;
 * Right child should be greater or equal to the parent;
 #### Find
-**O(logN)** The time required to find a node depends on how many levels down it is situated.
+**O(logN)** The time required to find a node depends on how many levels down it is situated. Might degrade to O(N) if the tree is not balanced.
 #### Insert
-**O(logN)** To insert a node means to find one that does not exist and update the references.
+**O(logN)** To insert a node means to find one that does not exist and update the references. Might degrade to O(N) if the tree is not balanced.
 #### Traverse
 **O(N)**
 #### Delete
-**O(logN)** To delete a node means to find the node and remove the references to it.
+**O(logN)** To delete a node means to find the node and remove the references to it. Might degrade to O(N) if the tree is not balanced.
 #### Notes on deleting a node
 When you’ve found the node, there are three cases to consider:
 
@@ -98,5 +99,15 @@ If **successor** is a left descendant of the right child of the node to be delet
 4. Unplug current’s left child from current, and plug it into the leftChild field of successor.
 
 ![](../0-images/successor-left-child.png)
+## Red-Black tree
+* The nodes are colored;
+* During insertion and deletion, rules are followed that preserve various arrangements of these colors;
+    1. Every node is either red or black;
+    2. The root is always black;
+    3. If a node is red, its children must be black (although the converse isn’t necessarily true);
+    4. Every path from the root to a leaf, or to a null child, must contain the same number of black nodes;
+* To fix rules violations you can either flip the colors or rotate the nodes;
+#### The Efficiency of Red-Black Trees
+Like ordinary binary search trees, a red-black tree allows for searching, insertion, and deletion in **O(logN)** time. Search times should be almost the same in the red-black tree as in the ordinary tree because the red-black characteristics of the tree aren’t used during searches. The only penalty is that the storage required for each node is increased slightly to accommodate the red-black color (a boolean variable). The times for insertion and deletion are increased by a constant factor because of having to perform color flips and rotations on the way down and at the insertion point. The advantage is that in a red-black tree sorted data doesn’t lead to slow **O(N)** performance.
 
 
