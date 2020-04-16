@@ -5,6 +5,7 @@
 * [Merge sort](#merge-sort)
 * [Shell sort](#shell-sort)
 * [Quicksort](#quicksort)
+* [Heapsort](#heapsort)
 ## Bubble sort
 The idea is to put the smallest item at the beginning of the array (index 0) and the largest item at the end (index nElems-1). The loop counter _**out**_ in the outer for loop starts at the end of the array, at nElems-1, and decrements itself each time through the loop. The items at indices greater than _**out**_ are always completely sorted. The _**out**_ variable moves left after each pass by in so that items that are already sorted are no longer involved in the algorithm.
 The inner loop counter _**in**_ starts at the beginning of the array and increments itself each cycle of the inner loop, exiting when it reaches _**out**_. Within the inner loop, the two array cells pointed to by _**in**_ and _**in+1**_ are compared, and swapped if the one in _**in**_ is larger than the one in _**in+1**_.
@@ -92,6 +93,9 @@ The worst situation results when a subarray with N elements is divided into one 
 A compromise solution is to find the median of the first, last, and middle elements of the array, and use this for the pivot. Those elements can be sorted and put in proper positions (first, center and last). Picking the median of the first, last, and middle elements is called the median-of-three approach. 
 
 If you use the median-of-three partitioning method, it follows that the quicksort algorithm won’t work for partitions of three or fewer items. The number 3 in this case is called a cutoff point. Another option for dealing with small partitions is to use the insertion sort. When you do this, you aren’t restricted to a cutoff of 3. You can set the cutoff to 10, 20, or any other number. It’s interesting to experiment with different values of the cutoff to see where the best performance lies. Knuth recommends a cutoff of 9. However, the optimum number depends on your computer, operating system, compiler (or interpreter), and so on.
-
 #### Efficiency of Quicksort
 All divide-and-conquer algorithms operate in __O(N*logN)__ time in which a recursive method divides a range of items into two groups and then calls itself to handle each group. In this situation the logarithm actually has a base of 2.
+## Heapsort
+The basic idea is to insert all the unordered items into a heap using the normal insert() routine. Repeated application of the remove() routine will then remove the items in sorted order. Heapsort can be made to run faster by applying the trickle-down algorithm directly to N/2 items in the unsorted array, rather than inserting N items. The same array can be used for the initial unordered data, for the heap array, and for the final sorted data. Thus, heapsort requires no extra memory.
+#### The Efficiency of Heapsort
+Because insert() and remove() operate in **O(logN)** time, and each must be applied N times, the entire sort requires **O(N*logN)** time, which is the same as quicksort. However, it’s not quite as fast as quicksort, partly because there are more operations in the inner while loop in trickleDown() than in the inner loop in quicksort. Certain arrangements of key values can reduce quicksort to slow **O(N^2)** time, whereas heapsort runs in __O(N*logN)__ time no matter how the data is distributed.
