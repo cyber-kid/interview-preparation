@@ -35,8 +35,18 @@
     16. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/04-java-core/16-links.md)
     17. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/04-java-core/17-notes.md)
 5. [Concurrency](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/)
-    1. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/98-links.md)
-    2. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/99-notes.md)
+    1. [Concurrency basics](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/01-basics.md)
+    2. [Building blocks of multithreaded application](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/02-building-blocks.md)
+    3. [Structuring Concurrent Applications](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/03-structuring-apps.md)
+    4. [Cancellation and Shutdown](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/04-cancellation-shutdown.md)
+    5. [Applying Thread Pools](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/05-thread-pools.md)
+    6. [Avoiding Liveness Hazards](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/06-liveness-hazards.md)
+    7. [Performance and Scalability](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/07-performance-scalability.md)
+    8. [Explicit Locks](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/08-explicit-locks.md)
+    9. [Building Custom Synchronizers](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/09-custom-synchronizers.md)
+    9. [Happens-before](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/10-happens-before.md)
+    98. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/98-links.md)
+    99. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/99-notes.md)
 6. ToDo: Spring Boot 2.0
 7. ToDo: Application Design
 8. ToDo: Containers and Container Orchestration
