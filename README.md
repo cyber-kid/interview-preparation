@@ -44,7 +44,7 @@
     7. [Performance and Scalability](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/07-performance-scalability.md)
     8. [Explicit Locks](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/08-explicit-locks.md)
     9. [Building Custom Synchronizers](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/09-custom-synchronizers.md)
-    9. [Happens-before](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/10-happens-before.md)
+    10. [Happens-before](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/10-happens-before.md)
     98. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/98-links.md)
     99. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/99-notes.md)
 6. ToDo: Spring Boot 2.0
@@ -52,3 +52,11 @@
 8. ToDo: Containers and Container Orchestration
 9. ToDo: Go
 10. ToDo: Security
+11. [Domain Driven Design](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/)
+    1. [The basic goals of domain-driven development](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/01-goals-of-ddd.md)
+    2. [Building Blocks of Model-driven Design](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/02-building-blocks.md)
+    3. [The Lifecycle of a Domain Object](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/03-life-cycle-of-domain-object.md)
+    4. [Refactoring](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/04-refactoring.md)
+    5. [Maintaining Model Integrity](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/05-model-integrity.md)
+    98. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/98-links.md)
+    99. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/99-notes.md)
