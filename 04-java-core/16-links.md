@@ -10,3 +10,6 @@
 * https://m.habr.com/ru/post/169883/
 * https://www.logicbig.com/tutorials/core-java-tutorial/gc/phantom-reference.html
 * https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/
+* https://medium.com/platform-engineer/understanding-jvm-architecture-22c0ddf09722
+* https://medium.com/platform-engineer/understanding-java-memory-model-1d0863f6d973
+* https://medium.com/platform-engineer/understanding-java-garbage-collection-54fc9230659a
