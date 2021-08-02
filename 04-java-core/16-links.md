@@ -13,3 +13,4 @@
 * https://medium.com/platform-engineer/understanding-jvm-architecture-22c0ddf09722
 * https://medium.com/platform-engineer/understanding-java-memory-model-1d0863f6d973
 * https://medium.com/platform-engineer/understanding-java-garbage-collection-54fc9230659a
+* https://www.baeldung.com/java-memory-management-interview-questions
