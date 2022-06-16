@@ -48,7 +48,9 @@
     98. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/98-links.md)
     99. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/99-notes.md)
 6. ToDo: Spring Boot 2.0
-7. ToDo: Application Design
+7. [Application Design](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/)
+    1. [Database types](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/1-databases.md)
+    2. [Formats for Encoding Data](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/2-encoding.md)
 8. ToDo: Containers and Container Orchestration
 9. ToDo: Go
 10. ToDo: Security
