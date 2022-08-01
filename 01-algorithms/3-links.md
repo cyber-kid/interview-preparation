@@ -14,3 +14,4 @@
 * https://jdhao.github.io/2017/09/30/sorting-algorithms-stability/
 * https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity
 * http://bigocheatsheet.com/
+* https://www.youtube.com/watch?v=v4cd1O4zkGw
