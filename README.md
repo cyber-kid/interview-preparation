@@ -51,6 +51,9 @@
 7. [Application Design](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/)
     1. [Database types](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/1-databases.md)
     2. [Formats for Encoding Data](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/2-encoding.md)
+    3. [Replication](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/3-replication.md)
+    4. [Partitioning](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/4-partitioning.md)
+    5. [Transactions](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/5-transactions.md)
 8. ToDo: Containers and Container Orchestration
 9. ToDo: Go
 10. ToDo: Security
