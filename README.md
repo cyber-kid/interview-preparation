@@ -47,15 +47,34 @@
     10. [Happens-before](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/10-happens-before.md)
     98. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/98-links.md)
     99. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/05-concurrency/99-notes.md)
-6. ToDo: Spring Boot 2.0
+6. [Spring](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/)
+    1. [Spring](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/01-spring.md)
+    2. [Spring Boot](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/02-spring-boot.md)
+    3. [Inversion of Control and Dependency Injection](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/03-ioc-di-in-spring.md)
+    3. [Spring MVC](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/04-spring-mvc.md)
+    3. [Spring Data JPA](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/05-spring-data-jpa.md)
+    3. [Spring Annotations](https://github.com/cyber-kid/interview-preparation/tree/master/06-spring/99-annotations.md)
 7. [Application Design](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/)
     1. [Database types](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/1-databases.md)
     2. [Formats for Encoding Data](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/2-encoding.md)
     3. [Replication](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/3-replication.md)
     4. [Partitioning](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/4-partitioning.md)
     5. [Transactions](https://github.com/cyber-kid/interview-preparation/tree/master/07-application-design/5-transactions.md)
-8. ToDo: Containers and Container Orchestration
-9. ToDo: Go
+8. [Containers and Container Orchestration](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration)
+   1. [Docker](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker)
+      1. [Docker Architecture](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/01-architecture.md)
+      2. [Docker Components](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/02-components.md)
+      3. [Docker Images](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/03-images.md)
+      4. [Docker Networking](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/04-networking.md)
+      5. [Docker Compose](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/05-compose.md)
+      6. [Docker Volumes](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/06-volumes.md)
+      7. [Docker Commands](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/docker/07-commands.md)
+   2. [k8s](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/k8s)
+      1. [k8s Architecture](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/k8s/01-architecture.md)
+      2. [k8s Components](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/k8s/02-components.md)
+      3. [k8s API Objects](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/k8s/03-api-objects.md)
+   3. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/08-containers-container-orchestration/99-links.md)
+9. ToDo: Kafka
 10. ToDo: Security
 11. [Domain Driven Design](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/)
     1. [The basic goals of domain-driven development](https://github.com/cyber-kid/interview-preparation/tree/master/11-domain-driven-design/01-goals-of-ddd.md)
@@ -72,6 +91,9 @@
     4. [Objects and Data Structures](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/04-objects-data-structures.md)
     5. [Error Handling](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/05-error-handling.md)
     6. [Classes](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/06-classes.md)
-    97. [General](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/97-general.md)
-    98. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/98-links.md)
-    99. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/99-notes.md)
+    7. [General](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/97-general.md)
+    8. [Links](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/98-links.md)
+    9. [Notes](https://github.com/cyber-kid/interview-preparation/tree/master/12-clean-code/99-notes.md)
+13. ToDo: AWS, GCP and Azure
+14. ToDo: Go
+15. ToDo: Python

@@ -1,0 +1,9 @@
+# Docker Architecture
+
+In reality, a container is made up of two different pieces, and a group of associated features. A container includes:
+* A container image
+* A set of operating system concepts that isolates a running process or processes
+
+The container image contains the application runtime, which consists of binaries, libraries, and other data needed to run the container. Developer can package up their application as a container image on their development laptop and have faith that when that image is deployed and run in a different setting—be it another user’s laptop or a server in a datacenter—the container will behave exactly as it did on the developer’s laptop. This portability and consistent execution in a variety of environments are among the primary values of container images.
+
+When a container image is run, it is also executed using namespaces in the operating system. These namespaces contain the process and provide isolation for it and its peers from other things running on the machine. This isolation means, for example, that each running container has its own separated filesystem (like a chroot). Additionally, each container has its own network and PID namespaces, meaning that process number 42 in one container is a different process than number 42 in another container. There are many other namespaces within the kernel that separate various running containers from each other. Additionally, control groups (cgroups) allow the isolation of resource usage, like memory or CPU. Finally, standard operating system security features, like SELinux or AppArmor, can also be used with running containers. Combined, all of this isolation makes it more difficult for different processes running in separate containers to interfere with each other.
