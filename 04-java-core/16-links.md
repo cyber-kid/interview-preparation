@@ -14,3 +14,4 @@
 * https://medium.com/platform-engineer/understanding-java-memory-model-1d0863f6d973
 * https://medium.com/platform-engineer/understanding-java-garbage-collection-54fc9230659a
 * https://www.baeldung.com/java-memory-management-interview-questions
+* https://docs.oracle.com/en/java/javase/11/gctuning/introduction-garbage-collection-tuning.html#GUID-326EB4CF-8C8C-4267-8355-21AB04F0D304
