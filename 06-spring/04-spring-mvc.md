@@ -18,10 +18,11 @@ Auto-configuration adds the following features to your web application.
 * **JSON serializers and deserializers** If you want to have more control over the serialization/deserialization to/from JSON, Spring Boot provides an easy way to create your own by extending from JsonSerializer<T> and/or JsonDeserializer<T>, and annotating your class with the @JsonComponent so that it can be registered for usage.
 * **Path matching and content negotiation** One of the Spring MVC application practices is the ability to respond to any suffix to represent the content-type response and its content negotiation.
 * **Error handling** Spring Boot uses /error mapping to create a white labeled page to show all the global errors. If you are creating a RESTful application, Spring Boot responds as JSON format. Spring Boot also supports Spring MVC to handle errors when you are using @ControllerAdvice or @ExceptionHandler annotations.
-* **Template engine support** Spring Boot supports FreeMarker, Groovy Templates, Thymeleaf, and Mustache. When you include the spring-boot-starter-<template engine> dependency, Spring Boot autoconfigure is necessary to enable and add all the necessary view resolvers and file handlers. By default, Spring Boot looks at the src/main/resources/templates/ path.
+* **Template engine support** Spring Boot supports FreeMarker, Groovy Templates, Thymeleaf, and Mustache. When you include the spring-boot-starter-\<template engine> dependency, Spring Boot autoconfigure is necessary to enable and add all the necessary view resolvers and file handlers. By default, Spring Boot looks at the src/main/resources/templates/ path.
 
 ### Exception Handling
-```
+
+```java
 @ControllerAdvice
 public class RestExceptionsHandler {
     @ExceptionHandler
