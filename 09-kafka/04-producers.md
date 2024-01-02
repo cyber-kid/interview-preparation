@@ -1,0 +1,35 @@
+# Kafka Producers
+* [Configuring Producers](#configuring-producers)
+* [Message Delivery Time](#message-delivery-time)
+
+We start producing messages to Kafka by creating a **ProducerRecord**, which must include the topic we want to send the record to and a value. Optionally, we can also specify a key, a partition, a timestamp, and/or a collection of headers. Once we send
+the **ProducerRecord**, the first thing the producer will do is serialize the key and value objects to byte arrays so they can be sent over the network.
+
+Next, if we didn’t explicitly specify a partition, the data is sent to a partitioner. The partitioner will choose a partition for us, usually based on the **ProducerRecord** key. Once a partition is selected, the producer knows which topic and partition the record will go to. It then adds the record to a batch of records that will also be sent to the same topic and partition. A separate thread is responsible for sending those batches of records to the appropriate Kafka brokers.
+
+When the broker receives the messages, it sends back a response. If the messages were successfully written to Kafka, it will return a **RecordMetadata** object with the topic, partition, and the offset of the record within the partition. If the broker failed to write the messages, it will return an error. When the producer receives an error, it may retry sending the message a few more times before giving up and returning an error.
+
+### Configuring Producers
+* **bootstrap.servers** - List of host:port pairs of brokers that the producer will use to establish initial connection to the Kafka cluster.
+* **key.serializer** - Name of a class that will be used to serialize the keys of the records we will produce to Kafka.
+* **value.serializer** - Name of a class that will be used to serialize the values of the records we will produce to Kafka.
+* **client.id** - A logical identifier for the client and the application it is used in. It is used in logging and metrics and for quotas.
+* **acks** - The acks parameter controls how many partition replicas must receive the record before the producer can consider the write successful (0 - fire and forget, 1 - the message is received by the leader, all - all in sync replicas received the message).
+
+### Message Delivery Time
+Since Apache Kafka 2.1, we divide the time spent sending a **ProduceRecord** into two time intervals that are handled separately:
+* Time until an async call to **send()** returns. During this interval, the thread that called **send()** will be blocked.
+* From the time an async call to send() returned successfully until the callback is triggered (with success or failure). This is the same as from the point a **ProduceRecord** was placed in a batch for sending until Kafka responds with success, nonretriable failure, or we run out of time allocated for sending.
+
+* **max.block.ms** - This parameter controls how long the producer may block when calling **send()**. This method may block when the producer’s send buffer is full or when metadata is not available. When **max.block.ms** is reached, a timeout exception is thrown.
+* **delivery.timeout.ms** - This configuration will limit the amount of time spent from the point a record is ready for sending (send() returned successfully and the record is placed in a batch)until either the broker responds or the client gives up, including time spent on retries. This time should be greater than **linger.ms** and **request.timeout.ms**. If you try to create a producer with an inconsistent timeout configuration, you will get an exception. Messages can be successfully sent much faster than delivery.timeout.ms, and typically will. If the producer exceeds delivery.timeout.ms while retrying, the callback will be called with the exception that corresponds to the error that the broker returned before retrying. If **delivery.timeout.ms** is exceeded while the record batch was still waiting to be sent, the callback will be called with a timeout exception.
+* **request.timeout.ms** - This parameter controls how long the producer will wait for a reply from the server when sending data. Note that this is the time spent waiting on each producer request before giving up; it does not include retries, time spent before sending, and so on. If the timeout is reached without reply, the producer will either retry sending or complete the callback with a **TimeoutException**.
+* **retries** and **retry.backoff.ms** - When the producer receives an error message from the server, the error could be transient (e.g., a lack of leader for a partition). In this case, the value of the retries parameter will control how many times the producer will retry sending the message before giving up and notifying the client of an issue. By default, the producer will wait 100 ms between retries, but you can control this using the **retry.backoff.ms** parameter.
+* **linger.ms** - Controls the amount of time to wait for additional messages before sending the current batch. KafkaProducer sends a batch of messages either when the current batch is full or when the **linger.ms** limit is reached. By default, the producer will send messages as soon as there is a sender thread available to send them, even if there’s just one message in the batch.
+* **buffer.memory** - This config sets the amount of memory the producer will use to buffer messages waiting to be sent to brokers. If messages are sent by the application faster than they can be delivered to the server, the producer may run out of space, and additional **send()**calls will block for **max.block.ms** and wait for space to free up before throwing an exception. Note that unlike most producer exceptions, this timeout is thrown by send() and not by the resulting Future.
+* **compression.type** - By default, messages are sent uncompressed. This parameter can be set to **snappy**, **gzip**, **lz4**, or **zstd**, in which case the corresponding compression algorithms will be used to compress the data before sending it to the brokers.
+* **batch.size** - When multiple records are sent to the same partition, the producer will batch them together. This parameter controls the amount of memory in bytes (not messages!)that will be used for each batch.
+* **max.in.flight.requests.per.connection** - This controls how many message batches the producer will send to the server without receiving responses.
+* **max.request.size** - This setting controls the size of a produce request sent by the producer. It caps both the size of the largest message that can be sent and the number of messages that the producer can send in one request.
+* **receive.buffer.bytes** and **send.buffer.bytes** - These are the sizes of the TCP send and receive buffers used by the sockets when writing and reading data. If these are set to –1, the OS defaults will be used.
+* **enable.idempotence** - When the idempotent producer is enabled, the producer will attach a sequence number to each record it sends. If the broker receives records with the same sequence number, it will reject the second copy and the producer will receive the harmless **DuplicateSequenceException**.
