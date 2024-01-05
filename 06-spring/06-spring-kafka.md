@@ -90,3 +90,8 @@ Starting with version 2.8, the legacy **ErrorHandler** and **BatchErrorHandler**
 ### Links
 * https://developer.confluent.io/courses/spring/apache-kafka-intro/
 * https://docs.spring.io/spring-kafka/reference/index.html
+* https://www.confluent.io/blog/schema-registry-avro-in-spring-boot-application-tutorial/
+* https://www.confluent.io/blog/apache-kafka-spring-boot-application/
+* https://www.lydtechconsulting.com/blog-kafka-schema-registry-demo-part1.html
+* https://www.lydtechconsulting.com/blog-kafka-schema-registry-demo-part2.html
+* https://www.baeldung.com/spring-kafka

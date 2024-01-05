@@ -90,4 +90,5 @@ public static class SinkFromConsumer {
 To specify which functional bean to bind to the external destination(s) exposed by the bindings, you must provide **spring.cloud.function.definition** property.
 
 ### Links
-https://docs.spring.io/spring-cloud-stream/reference/index.html
+* https://docs.spring.io/spring-cloud-stream/reference/index.html
+* https://www.baeldung.com/spring-cloud-stream-kafka-avro-confluent
