@@ -64,4 +64,3 @@ There are multiple ways to commit the current offset:
 * **Asynchronous Commit** - Another option is the asynchronous commit API. Instead of waiting for the broker to respond to a commit, we just send the request and continue on. The drawback is that while **commitSync()** will retry the commit until it either succeeds or encounters a nonretriable failure, **commitAsync()** will not retry. The reason it does not retry is that by the time **commitAsync()** receives a response from the server, there may have been a later commit that was already successful.
 * **Combining Synchronous and Asynchronous Commits**
 * **Committing a Specified Offset** - Fortunately, the Consumer API allows you to call **commitSync()** and **commitAsync()** and pass a map of partitions and offsets that you wish to commit.
-* 
